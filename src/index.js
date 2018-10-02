@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store'
 
 const render = () => {
     fancyLog();
-    return ReactDOM.render(<App />, document.getElementById('root'));;
+    return ReactDOM.render(<App />, document.getElementById('root'));
 }
 render();
 
