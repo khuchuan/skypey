@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App/App';
+import App from './containers/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store'
 
@@ -16,7 +16,7 @@ store.subscribe(render);
 function fancyLog() {
     console.log("%c Rendered with 👉 👉👇", "background: purple; color: #FFF");
     console.log(store.getState());
-  }
+}
 
 
 registerServiceWorker();
