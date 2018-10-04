@@ -7,6 +7,7 @@ import ChatWindow from '../ChatWindow/ChatWindow';
 const Main = ({ user, activeUserId }) => {
     const renderMainContent = () => {
         if (!activeUserId) {
+            console.log('main. activeUserId: ' + activeUserId);
             return <Empty user={user} activeUserId={activeUserId} />
         }
         else {

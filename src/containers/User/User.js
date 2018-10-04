@@ -1,11 +1,13 @@
 import React from "react";
 import "./User.css";
+import store from "../../store";
+import {setActiveUserId} from "../../actions";
 
 const User = ({ user }) => {
     const { name, profile_pic, status } = user;
 
     return (
-        <div className="User">
+        <div className="User" onClick={handleUserClick.bind(null, user)}>
             <img src={profile_pic} alt={name} className="User_pic" />
             <div className="User__details">
                 <p className="User__details-name">{name}</p>
@@ -13,6 +15,11 @@ const User = ({ user }) => {
             </div>
         </div>
     )
+}
+
+function handleUserClick({ user_id }) {
+    console.log('User ->user_id: ' + user_id);
+    store.dispatch(setActiveUserId(user_id));
 }
 
 export default User;
