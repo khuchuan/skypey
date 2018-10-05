@@ -3,13 +3,11 @@ import './Sidebar.css';
 import User from '../../containers/User/User';
 
 const Sidebar = ({contacts} ) => {
-    // console.log('Sidebar.contacts: ' + JSON.stringify(contacts));
-    console.log('da vao Sidebar');
-
+    // console.log('Sidbar: ' + JSON.stringify(contacts));
+       
     return (
         <aside className="Sidebar">
-            {contacts.map( contact => <User user={contact } key= {contact.user_id} /> ) }
-            {/* {contacts.map( contact => <User user={contact } key= {Math.round(new Date().getTime()/1000)} /> ) } */}
+            {contacts.map( contact => <User user={contact } key={contact.user_id} /> ) }
         </aside>
     )
 }
